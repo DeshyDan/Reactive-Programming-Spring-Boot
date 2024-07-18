@@ -1,1 +1,13 @@
-spring.application.name=Reactive Programming Spring Boot
+spring:
+  application:
+    name: Reactive Programming Spring Boot
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/reactiveDemo
+    username: postgres
+    password: password
+
+  flyway:
+    user: postgres
+    password: password
+    url: jdbc:postgresql://localhost:5432/reactiveDemo
