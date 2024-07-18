@@ -1,0 +1,21 @@
+services:
+  postgres:
+    container_name: postgres-reactive-demo
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      PGDATA: var/lib/postgres/data
+      POSTGRES_DB: reactiveDemo
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/data/postgres
+
+
+
+volumes:
+  postgres:
+    driver:
+      local
